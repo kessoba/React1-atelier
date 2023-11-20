@@ -1,7 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Picture from './picture';
+import React, { useEffect, useRef } from 'react'
+import Pictures from './Components/pictures';
 
- function App(){
+import App2 from './Components/App2';
+
+
+
+  function App(){
       const [title,setTitle] = React.useState('coucou les amis');
       const[show,setShow] = React.useState(false);
       const isShowInitialize = useRef(false);
@@ -27,12 +31,15 @@ import Picture from './picture';
       <button className="bg-blue-900 text-white rounded py-4 px-3 " 
       onClick={handleClick} >Click</button>
 
-      {show? < Picture/> :null}
+      {show? < Pictures/> :null}
+      
+      <App2/>
 
     </div>
   );
 }
- export default (App);
+export default App
+ 
 // class App extends React.Component{
 
 //       constructor(props){
@@ -70,3 +77,4 @@ import Picture from './picture';
 // }
 
 // export default App
+
